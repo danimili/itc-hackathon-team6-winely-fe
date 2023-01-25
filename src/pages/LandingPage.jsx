@@ -10,9 +10,13 @@ export default function LandingPage() {
   }
   return (
     <>
-   <h1 className="welcome">LandingPage</h1>
-   <div>Welcome + Explanation </div>
-   <button onClick={handleStart}>Get Started</button>
+    <body className="body">
+      <div className= "home-text">
+   <h1 className="welcome">Welcome to Winely</h1>
+   <h3 className="text">Your Costumized Wine Recommendation to get to know Wines from Different Cultures </h3>
+   </div>
+   <button className="get-started-btn" onClick={handleStart}>Get Started</button>
+   </body>
     </>
   )
 }

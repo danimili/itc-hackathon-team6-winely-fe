@@ -1,7 +1,10 @@
 import React from 'react'
-
+import WineCard from '../components/WineCard'
 export default function RecommendationPage() {
   return (
-    <div>RecommendationPage</div>
+    <>
+    <h1>Recommnedation Page</h1>
+<WineCard/>
+    </>
   )
 }
