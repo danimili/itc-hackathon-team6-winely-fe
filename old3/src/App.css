@@ -1,0 +1,48 @@
+
+.favorite-country{
+  padding: 11px 31px;
+ 
+}
+
+ .FavoriteCountrys{
+  width: 500px;
+ }
+
+
+.country-card{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    /* border-bottom: solid 2px   rgb(204, 204, 204); */
+    background-color: rgb(240, 240, 240);
+    margin-top: 11px;
+  }
+
+.card-countryName{
+margin-top: 13px;
+}
+
+
+
+  .country-card:hover {
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+  }
+
+.favorite-country:hover{
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+
+  .country-img{
+    object-fit: cover;
+    width: 70px;
+    height: 40px;
+
+    
+  }
+
+
+

@@ -1,19 +1,23 @@
 import { useNavigate,} from "react-router-dom";
 import axios from 'axios';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Search.css"
+import AppContext from "../AppContext";
 
 
 
 const SearchBar = ({ keyword, onChange }) => {
 const navigate = useNavigate();
-const [searchResults, setSearchResults] = useState([]);
+const {setSearchResults} =useContext(AppContext);
+// const [searchResults, setSearchResults] = useState([]);
 const [userDetails, setUserDetails] = useState('')
 
 console.log(userDetails)
 const handleUserDetails = e => {
   setUserDetails({ [e.target.id]: e.target.value})
 }
+
+
 
 
 const handleSearch = async (e) => {
@@ -23,15 +27,14 @@ const handleSearch = async (e) => {
   const res = await axios.get(`http://localhost:8080/search?title=${userDetails.title}`);
   console.log(res)
   setSearchResults(res.data)
-  console.log(searchResults)
   }catch (err){
     alert(err)
   }
-  // navigate("/RecommendationPage");
+  navigate("/RecommendationPage");
 }  
 
   const BarStyle = {
-    width: "20rem",
+    width: "50rem",
     background: "#F0F0F0",
     border: "none",
     padding: "0.5rem",
