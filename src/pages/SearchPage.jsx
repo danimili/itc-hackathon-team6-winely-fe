@@ -6,5 +6,6 @@ export default function SearchPage() {
     <>
         <SearchBar />
     </>
+
   )
 }

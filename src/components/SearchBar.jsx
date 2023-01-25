@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import "../App.css"
 
 const SearchBar = ({ keyword, onChange }) => {
 const navigate = useNavigate();
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    navigate("/");
-
+    navigate("/RecommendationPage");
   }  
 
   const BarStyle = {
