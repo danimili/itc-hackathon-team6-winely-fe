@@ -4,20 +4,17 @@ import { Routes, Route } from "react-router-dom";
 import AppContext from './AppContext';
 import LandingPage from './pages/LandingPage';
 import SearchPage from './pages/SearchPage';
-import WinePage from './pages/WinePage'
-import RecommendationPage from './pages/RecommendationPage';
 
 function App() {
 
   
   return (
     <>
-    <AppContext.Provider value={{}}>
+    <AppContext.Provider>
       <Routes>
-        <Route index element={<LandingPage/>}/>
+        <Route path="/" element = {<LandingPage/>}></Route>
         <Route path="/Search" element = {<SearchPage/> } ></Route>
-        <Route path="/RecommendationPage" element = {<RecommendationPage/>}></Route>
-        <Route path="/Wines" element = {<WinePage/>}></Route>
+        <Route path="/Wines"></Route>
       </Routes>
       </AppContext.Provider>
     </>
