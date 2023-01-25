@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function MostPopular() {
   return (
-    <div>MostPopular</div>
+    <h2>5 Most Popular</h2>
   )
 }
