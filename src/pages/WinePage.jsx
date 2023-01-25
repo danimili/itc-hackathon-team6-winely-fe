@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './WinePage.css';
 import winecard from '../components/Images/winecard.jpg';
 import AppContext from '../AppContext';
@@ -7,6 +7,15 @@ import AppContext from '../AppContext';
 
 export default function WinePage() {
 
+const {wineDetails} = useContext(AppContext)
+const [wine, setWine] = useState({})
+const params = new URL(document.location).searchParams;
+const id = params.get("id")
+
+useEffect(() =>  {
+setWine({...wineDetails[id]});
+
+},[])
 
 
   return (
