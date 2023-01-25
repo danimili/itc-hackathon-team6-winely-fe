@@ -16,6 +16,7 @@ useEffect(() =>  {
 setWine({...wineDetails[id]});
 
 },[])
+console.log(wine)
 
 
   return (
@@ -24,14 +25,15 @@ setWine({...wineDetails[id]});
         <div className="wine-card-top">
           <img className="wine-card-img" src={winecard} alt="Avatar" />
           <div className="wine-card-top-txt">
-            <div className="wine-card-txt"><b>Name: Vie di Romans</b></div>
-            <div className="wine-card-txt"><b>Type: Pinot Grigio</b></div>
-            <div className="wine-card-txt"><b>Origin: Italy</b></div>
+            <div className="wine-card-txt"><b>{wine.title}</b></div>
+            <div className="wine-card-txt"><b>Variety: {wine.varietal}</b></div>
+            <div className="wine-card-txt"><b>Country: {wine.country}</b></div>
+            <div className="wine-card-txt"><b>Region: {wine.province} {wine.region}</b></div>
           </div>
         </div>
-        <div className="wine-card-txt">More Details:</div>
-        <div className="wine-card-txt">More Details:</div>
-        <div className="wine-card-txt">More Details:</div>
+        <div className="wine-card-txt">Description: {wine.description}</div>
+        <div className="wine-card-txt">Winery: {wine.winery}</div>
+        <div className="wine-card-txt">Rating: {wine.points} Price: {wine.price} Euro/Dollars?</div>
       </div>
     </>
   )

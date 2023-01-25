@@ -20,14 +20,14 @@ const navigate = useNavigate()
 
   return (
     <>
-    <div className="card">
+    <div onClick={toWinePage} className="card">
       <img className="card-image" src={winecard}/>
       <div className="container">
         <h3><b>{item.title}</b></h3>
         <h4>{item.varietal}</h4>
         <h4>{item.country}</h4>
         <Tooltip title="Details">
-            <div onClick={toWinePage}>
+            <div>
               <IoIosWine size={30} />
             </div>
           </Tooltip>

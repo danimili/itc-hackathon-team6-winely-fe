@@ -21,7 +21,7 @@ export default function RecommendationPage() {
         <h1> Below is a list of recommended wines based on your preference!</h1>
         <div>
           Wine Recommendations:
-          <div className="Wine"> 
+          <div className="recommendationBoxes"> 
         {searchResults.map(item => (
         <div  key={item.id} className="wineCard"><WineCard {...item}/></div>
         ))}
