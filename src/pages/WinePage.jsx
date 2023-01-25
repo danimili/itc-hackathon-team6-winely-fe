@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './WinePage.css';
 import winecard from '../components/Images/winecard.jpg';
+import AppContext from '../AppContext';
+
 
 
 export default function WinePage() {
+
+
+
   return (
     <>
       <div className="wine-page-card">
