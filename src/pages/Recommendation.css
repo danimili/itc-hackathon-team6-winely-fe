@@ -3,7 +3,7 @@ height: 0%;
 }
 .recommendationPage {
     background-color: beige;
-    height: 100vh;
+    height: 160vh;
     width: 100vw;
     text-align: center;
   
@@ -16,6 +16,8 @@ height: 0%;
     align-items: center;
     justify-content: space-around;
     font-size: large;
+    flex-wrap: wrap;
+    gap: 2%
   }
   
   
