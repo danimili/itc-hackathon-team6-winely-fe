@@ -34,7 +34,7 @@ const handleSearch = async (e) => {
 }  
 
   const BarStyle = {
-    width: "20rem",
+    width: "50rem",
     background: "#F0F0F0",
     border: "none",
     padding: "0.5rem",

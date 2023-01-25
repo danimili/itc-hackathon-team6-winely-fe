@@ -12,7 +12,7 @@ const navigate = useNavigate()
   const toWinePage = async (e) => {
     e.stopPropagation();
     try {
-      navigate("/Wines");
+      navigate(`/Wines?id=${item.id}`);
     } catch (err) {
       console.log(err);
     }
