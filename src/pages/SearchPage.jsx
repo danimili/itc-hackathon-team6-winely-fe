@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function SearchPage() {
   return (
-    <div>SearchPage</div>
+    <h1>SearchPage</h1>
   )
 }
