@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import App from "../App";
 import WineCard from "../components/WineCard";
-
+import "./Recommendation.css"
 export default function RecommendationPage() {
   return (
     <>
@@ -14,22 +14,25 @@ export default function RecommendationPage() {
               <p>
                 {" "}
                 France <img src=""></img>{" "}
+                <WineCard/>
               </p>{" "}
             </div>
             <div className="recommendationBox">
               <p>
                 {" "}
                 Italy <img src=""></img>{" "}
+                <WineCard/>
               </p>
             </div>
             <div className="recommendationBox">
               <p>
                 {" "}
-                US-+ <img src=""></img>{" "}
+                US <img src=""></img>{" "}
+                <WineCard/>
               </p>
             </div>
           </div>
-          <WineCard/>
+         
         </div>
       </div>
     </>
