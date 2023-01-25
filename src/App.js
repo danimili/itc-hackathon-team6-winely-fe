@@ -18,6 +18,7 @@ function App() {
         <Route path="/Search" element = {<SearchPage/> } ></Route>
         <Route path="/RecommendationPage" element = {<RecommendationPage/>}></Route>
         <Route path="/Wines" element = {<WinePage/>}></Route>
+        
       </Routes>
       </AppContext.Provider>
     </>
