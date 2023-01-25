@@ -13,7 +13,7 @@ function App() {
     <AppContext.Provider>
       <Routes>
         <Route path="/" element = {<LandingPage/>}></Route>
-        <Route path="/Search" ></Route>
+        <Route path="/Search" element = {<SearchPage/> } ></Route>
         <Route path="/Wines"></Route>
       </Routes>
       </AppContext.Provider>
