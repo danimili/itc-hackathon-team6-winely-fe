@@ -2,7 +2,15 @@ import React from "react";
 import App from "../App";
 import WineCard from "../components/WineCard";
 import "./Recommendation.css"
+import { useEffect } from "react";
+import axios from "axios";
 export default function RecommendationPage() {
+  useEffect(()=> {
+    axios.get(`http://localhost:8080/search/country?country=${window.location.pathname.split('/')[2]}`)
+    .then((res) => {
+      console.log(res)
+    })
+  }, [])
   return (
     <>
       <div className="recommendationPage">
