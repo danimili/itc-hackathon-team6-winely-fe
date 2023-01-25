@@ -1,0 +1,45 @@
+.wine-page-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 475px;
+    height: 550px;
+    margin-top: 60px;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    opacity: 0.6; 
+    border-radius: 8px;
+      border-style: none;
+      box-sizing: border-box;
+      color: #FFFFFF;
+    border-radius: 12px;
+  }
+  
+  .wine-card-img {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    border-radius: 12px;
+  
+  }
+  
+  .wine-card-top {
+    display: flex;
+    flex-direction: row;
+    gap:15%;
+  }
+  
+  .wine-card-top-txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .wine-card-txt{
+  padding: 2%;
+  margin: 2%;
+  border-radius: 12px;
+  text-align: center;
+  width:180px;
+  }

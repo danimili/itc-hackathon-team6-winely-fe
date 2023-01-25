@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import AppContext from './AppContext';
@@ -20,6 +20,7 @@ function App() {
         <Route path="/Wines" element = {<WinePage/>}></Route> 
       </Routes>
       </AppContext.Provider>
+      
     </>
   );
 }

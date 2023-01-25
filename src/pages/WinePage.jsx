@@ -1,7 +1,24 @@
-import React from 'react'
+import React from 'react';
+import './WinePage.css';
+import winecard from '../components/Images/winecard.jpg';
+
 
 export default function WinePage() {
   return (
-    <div>WinePage</div>
+    <>
+      <div className="wine-page-card">
+        <div className="wine-card-top">
+          <img className="wine-card-img" src={winecard} alt="Avatar" />
+          <div className="wine-card-top-txt">
+            <div className="wine-card-txt"><b>Name: Vie di Romans</b></div>
+            <div className="wine-card-txt"><b>Type: Pinot Grigio</b></div>
+            <div className="wine-card-txt"><b>Origin: Italy</b></div>
+          </div>
+        </div>
+        <div className="wine-card-txt">More Details:</div>
+        <div className="wine-card-txt">More Details:</div>
+        <div className="wine-card-txt">More Details:</div>
+      </div>
+    </>
   )
 }

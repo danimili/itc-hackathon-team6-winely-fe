@@ -1,13 +1,34 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
+import axios from 'axios';
+import { useState } from "react";
 import "./Search.css"
+
+
 
 const SearchBar = ({ keyword, onChange }) => {
 const navigate = useNavigate();
+const [searchResults, setSearchResults] = useState([]);
+const [userDetails, setUserDetails] = useState('')
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    navigate("/RecommendationPage");
-  }  
+console.log(userDetails)
+const handleUserDetails = e => {
+  setUserDetails({ [e.target.id]: e.target.value})
+}
+
+
+const handleSearch = async (e) => {
+  e.preventDefault();
+  console.log(userDetails)
+  try{
+  const res = await axios.get(`http://localhost:8080/search?title=${userDetails.title}`);
+  console.log(res)
+  setSearchResults(res.data)
+  console.log(searchResults)
+  }catch (err){
+    alert(err)
+  }
+  // navigate("/RecommendationPage");
+}  
 
   const BarStyle = {
     width: "20rem",
@@ -20,13 +41,13 @@ const navigate = useNavigate();
     <>
       <input
       className="search-bar"
-        style={BarStyle}
-        key="Find your next favorite wine"
-        value={keyword}
-        placeholder="Search"
-        onChange={(e) => onChange(e.target.value)}
+      id ="title"
+      style={BarStyle}
+      value={keyword}
+      placeholder={"Find your next favorite wine"}
+      onChange={handleUserDetails}
       />
-      <button className="search-btn" onClick={(e) => handleSearch}>Search</button>
+      <button className="search-btn" onClick= {handleSearch}>Search</button>
     </>
   );
 };
