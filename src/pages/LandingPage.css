@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     margin: 0;
+    /* display: flex; */
     padding: 0;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,13 +53,13 @@ margin-left:-295px;
       touch-action: manipulation;
     }
     
-    .button-36:hover {
+    .get-started-btn:hover {
       box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
       transition-duration: .1s;
     }
     
     @media (min-width: 768px) {
-      .button-36 {
+      .get-started-btn {
         padding: 0 2.6rem;
       }
 }
