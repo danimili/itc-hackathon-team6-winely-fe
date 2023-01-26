@@ -11,7 +11,7 @@ export default function WinePage() {
     );
     const params = new URL(document.location).searchParams;
     const id = params.get("id");
-
+    console.log(wineDetails);
     useEffect(() => {
         setWine({ ...wineDetails[id] });
         const wineTitle = wineDetails[id].title;
