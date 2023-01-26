@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
- import CountryCard from "./CountryCard";
+import FavoriteCountry from "./FavoriteCountry";
 
 const contryNames = [
   {countryName:'argentina', flagUrl:'../flagImages/argentina.png'},
@@ -25,22 +25,34 @@ function FavoriteCountries( ) {
 
   return (
     <>
-  <Row>
-  
-        {favContries.map((country) => (
-          <Col key={country.countryName} md={12} lg={12}       >
-            <CountryCard    
-             countryName={country.countryName}
-              flagUrl={country.flagUrl}
-   
-            />
-          </Col>
-        ))}
-      </Row>  
+     <div className="wrap">
+    <Container className="  mb-4 FavoriteCountrys">
+    <Row  className="m-0"  >
+    <Col  > <h3 className="headline">Most wanted </h3></Col>
+    </Row>
 
-     </>
+
+    <Row  className="m-0"  >
+    {favContries.map((country) => (
+  <Col key={country.countryName}
+  //  md={2} lg={2}     
+     >
+    <FavoriteCountry      
+     countryName={country.countryName}
+      flagUrl={country.flagUrl}
+    />   
+  </Col>
+))}
+ </Row>
+</Container>
+</div>
+
+      {/* <EditPetModal show={show} handleClose={handleClose}  petInfo={petInfo}/> */}
+    </>
   );
 }
 
 export default FavoriteCountries;
   
+
+

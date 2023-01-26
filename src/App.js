@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage';
 import SearchPage from './pages/SearchPage';
 import WinePage from './pages/WinePage'
 import RecommendationPage from './pages/RecommendationPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { useState } from 'react';
 function App() {
   const [searchResults, setSearchResults] = useState([]);

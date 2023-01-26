@@ -17,12 +17,15 @@ export default function FavoriteCountry({countryName, flagUrl}) {
   return (
  
 
-<Row  className='favorite-country' onClick={navigateRecommendation } > 
-  <img className=" country-img" src={flagUrl} alt={countryName}/> 
- <p> {countryName}</p> 
-</Row>
-  )
-}
+    <Row  className='favorite-country' onClick={navigateRecommendation } > 
+      <img className=" fav-country-img" src={flagUrl} alt={countryName}/> 
+     <p> {countryName}</p> 
+    </Row>
+      )
+    }
+    
+
+    
 
 
 

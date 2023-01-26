@@ -16,16 +16,31 @@ export default function CountryCard({countryName, flagUrl}) {
 
   return (
  
- <Container>
+    <Container  >
+   
+   <Row  
+    className='country-card mb-2  '
+    onClick={navigateRecommendation } > 
+    <Col xs={2}><img className=" country-img m-0" src={flagUrl} alt={countryName}/> </Col>
+    <Col xs={10}  className=' '> <p className="card-countryName    "> {countryName}</p></Col>
+    
+   
+   </Row>
+   
+   </Container>  
+     )
+   }
 
-<Row  className='country-card mb-2  ' onClick={navigateRecommendation } > 
- <Col xs={2}><img className=" country-img" src={flagUrl} alt={countryName}/> </Col>
- <Col> <p> {countryName}</p></Col>
+
+
+
+
+
+
+
+     {/* <img className=" " src={argentina}  />  */}
+     {/* <img className=" " src={../flagImages/argentina.png}  /> */}
+     {/* <img src="../flagImages/argentina.png"  /> */}
+    {/* <img className=" " src={"./flagImages/argentina.png"} /> */}
+    {/* <img src="../flagImages/argentina.png"  /> */}
  
-
-</Row>
-
-</Container>  
-  )
-}
-
