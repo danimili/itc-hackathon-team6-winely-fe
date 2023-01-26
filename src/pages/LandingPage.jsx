@@ -1,7 +1,6 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
-import RecommendationPage from "./RecommendationPage";
 
 export default function LandingPage() {
     const navigate = useNavigate();

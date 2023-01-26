@@ -1,40 +1,36 @@
-
- /* .bgPic{
+/* .bgPic{
   z-index: -3;
   position: absolute;
  } */
- .body{
-  background-image: url("./components/Images/winery.jpg");
-  /* opacity: 0.7; */
-  height: 100vh;
-  display: flex;
-  margin: 0;
-  /* display: flex; */
-  padding: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.body {
+    background-image: url("./components/Images/winery.jpg");
+    /* opacity: 0.7; */
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    /* display: flex; */
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-
-.favorite-country{
-  padding: 11px 11px;
-  transition: all 0.2s ease-in-out;
+.favorite-country {
+    padding: 11px 11px;
+    transition: all 0.2s ease-in-out;
 }
 
-.favorite-country:hover{
-  /* background-color: rgb(240, 240, 240); */
-  cursor: pointer;
-  transform: scale(1.04);
+.favorite-country:hover {
+    /* background-color: rgb(240, 240, 240); */
+    cursor: pointer;
+    transform: scale(1.04);
 }
 
+.FavoriteCountrys {
+    width: 600px;
+}
 
- .FavoriteCountrys{
-  width: 600px;
- }
-
-
-.country-card{
+.country-card {
     display: flex;
     text-align: start;
     /* align-items: center; */
@@ -44,63 +40,55 @@
     background-color: rgb(240, 240, 240, 0.75);
     margin-top: 11px;
     margin: 0;
-    padding:  15px 0 ;
+    padding: 15px 0;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
-  }
+}
 
-  .country-card:hover {
-    background-color: rgb(255, 255, 255 , 0.8);
+.country-card:hover {
+    background-color: rgb(255, 255, 255, 0.8);
     cursor: pointer;
     transform: scale(1.02);
-  }
-
-
-.card-countryName{
- font-family: 'Oswald', sans-serif;
-text-align: start;
-font-size: 16px;
-margin: auto;
 }
 
-.favorite-country-name{
-  font-family: 'Oswald', sans-serif;
-  text-align: start;
-  font-size: 16px;
-  color: rgb(244, 244, 244);
-
+.card-countryName {
+    font-family: "Oswald", sans-serif;
+    text-align: start;
+    font-size: 16px;
+    margin: auto;
+    color: rgb(94, 0, 145);
 }
 
-.wrap{
-max-width: 700px;
-margin: auto
-
+.favorite-country-name {
+    font-family: "Oswald", sans-serif;
+    text-align: start;
+    font-size: 16px;
+    color: rgb(94, 0, 145);
 }
 
+.wrap {
+    max-width: 700px;
+    margin: auto;
+}
 
-
- 
-
-  .country-img{
+.country-img {
     object-fit: cover;
     width: 70px;
     height: 40px;
+}
 
-    
-  }
-
-  h3{
-    font-family: 'Oswald', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
     text-align: start;
     font-size: 15px;
-    color: rgb(244, 244, 244);
-   
-    }
-  /* fav-country-img{
+    color: rgb(94, 0, 145);
+}
+/* fav-country-img{
     object-fit: cover;
     width: 270px;
     height: 40px;
 
     
   } */
-
