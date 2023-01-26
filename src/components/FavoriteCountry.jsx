@@ -24,7 +24,7 @@ export default function FavoriteCountry({countryName, flagUrl}) {
     } catch (err) {
         alert(err);
     }
-    // navigate("/RecommendationPage");
+    navigate("/RecommendationPage");
 };
 
   return (
