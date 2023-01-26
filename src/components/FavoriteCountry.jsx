@@ -1,9 +1,6 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import axios from "axios";
 import AppContext from "../AppContext";
 import { useContext } from "react";
