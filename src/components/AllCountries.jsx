@@ -10,7 +10,7 @@ const countryNames = [
     { countryName: "Germany", flagUrl: "../flagImages/germany.png" },
     { countryName: "Portugal", flagUrl: "../flagImages/portugal.png" },
     { countryName: "Hungary", flagUrl: "../flagImages/hungary.png" },
-    { countryName: "United States", flagUrl: "../flagImages/unitedstates.png" },
+    { countryName: "US", flagUrl: "../flagImages/unitedstates.png" },
     { countryName: "Chile", flagUrl: "../flagImages/chile.png" },
     { countryName: "South Africa", flagUrl: "../flagImages/south-africa.png" },
 ];
@@ -37,9 +37,6 @@ function AllCountries() {
                                     className="m-0"
                                     countryName={country.countryName}
                                     flagUrl={country.flagUrl}
-
-                                    //   handleShow={handleShow}
-                                    //   setPetinfo={setPetinfo}
                                 />
                             </Col>
                         ))}
