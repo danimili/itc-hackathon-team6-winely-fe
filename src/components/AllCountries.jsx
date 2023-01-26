@@ -1,4 +1,3 @@
-// import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CountryCard from "./CountryCard";
 

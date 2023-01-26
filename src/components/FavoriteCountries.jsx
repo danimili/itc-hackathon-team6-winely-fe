@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import FavoriteCountry from "./FavoriteCountry";
 
-const contryNames = [
+const countryNames = [
     { countryName: "Argentina", flagUrl: "../flagImages/argentina.png" },
     { countryName: "Australia", flagUrl: "../flagImages/australia.png" },
     { countryName: "Germany", flagUrl: "../flagImages/germany.png" },
@@ -12,7 +11,7 @@ const contryNames = [
     { countryName: "United States", flagUrl: "../flagImages/unitedStates.png" },
 ];
 
-const favContries = contryNames.filter(
+const favCountries = countryNames.filter(
     object =>
         object.countryName === "Argentina" ||
         object.countryName === "Italy" ||
@@ -32,7 +31,7 @@ function FavoriteCountries() {
                     </Row>
 
                     <Row className="m-0">
-                        {favContries.map(country => (
+                        {favCountries.map(country => (
                             <Col
                                 key={country.countryName}
                                 //  md={2} lg={2}

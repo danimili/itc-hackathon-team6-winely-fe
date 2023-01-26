@@ -29,28 +29,29 @@ const SearchBar = ({ keyword, onChange }) => {
         navigate("/RecommendationPage");
     };
 
-    // const BarStyle = {
-    //     width: "50rem",
-    //     // width: "30rem",
-
-    //     background: "#F0F0F0",
-    //     border: "none",
-    //     padding: "0.5rem",
-    // };
-
     return (
-        <div>
-            <input
-                className="search-bar"
-                id="title"
-                // style={BarStyle}
-                value={keyword}
-                placeholder={"Find your next favorite wine"}
-                onChange={handleUserDetails}
-            />
-            <button className="search-btn" onClick={handleSearch}>
-                Search
-            </button>
+        <div className="search-container">
+            <h1>Search Wines</h1>
+            <p>
+                The Romans named Sangiovese after the blood of Jupiter; that
+                must have been some hangover. The cabernet grape variety thrives
+                in a variety of vineyard soil types. Cheese is a perennial pair
+                with chardonnay, sauvignon blanc, don't get started on the pinks
+                and reds. Chenin blanc boasts a bouquet of fresh pears, saffron,
+                jasmine, ginger, and quince.
+            </p>
+            <div className="search-bar-container">
+                <input
+                    className="search-bar"
+                    id="title"
+                    value={keyword}
+                    placeholder={"Find your next favorite wine"}
+                    onChange={handleUserDetails}
+                />
+                <button className="search-btn" onClick={handleSearch}>
+                    Search
+                </button>
+            </div>
         </div>
     );
 };
