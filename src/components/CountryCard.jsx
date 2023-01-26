@@ -4,23 +4,38 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
+import AppContext from '../AppContext';
+import { useContext } from 'react';
 
 
 export default function CountryCard({countryName, flagUrl}) {
 
-  const navigate = useNavigate();
   
-  const navigateRecommendation = () => {
-    navigate(`/RecommendationPage/${countryName}`);
-  };
-
+  const navigate = useNavigate();
+  const { setSearchResults } = useContext(AppContext);
+  const handleCountrySearch = async e => {
+    e.preventDefault();
+    try {
+        const res = await axios.get(
+            `http://localhost:8080/search/country?country=${countryName}`
+        );
+        console.log(res);
+        setSearchResults(res.data);
+    } catch (err) {
+        alert(err);
+    }
+    navigate("/RecommendationPage");
+};
   return (
  
- <Container>
+ <Container  >
 
-<Row  className='country-card mb-2  ' onClick={navigateRecommendation } > 
- <Col xs={2}><img className=" country-img" src={flagUrl} alt={countryName}/> </Col>
- <Col> <p> {countryName}</p></Col>
+<Row  
+ className='country-card mb-2  '
+ onClick={handleCountrySearch} > 
+ <Col xs={2}><img className=" country-img m-0" src={flagUrl} alt={countryName}/> </Col>
+ <Col xs={10}  className=' '> <p className="card-countryName p-2   "> {countryName}</p></Col>
  
 
 </Row>
@@ -29,3 +44,17 @@ export default function CountryCard({countryName, flagUrl}) {
   )
 }
 
+
+
+
+
+
+
+
+
+     {/* <img className=" " src={argentina}  />  */}
+     {/* <img className=" " src={../flagImages/argentina.png}  /> */}
+     {/* <img src="../flagImages/argentina.png"  /> */}
+    {/* <img className=" " src={"./flagImages/argentina.png"} /> */}
+    {/* <img src="../flagImages/argentina.png"  /> */}
+ 
