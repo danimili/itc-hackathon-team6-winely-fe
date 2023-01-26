@@ -17,7 +17,8 @@ export default function WinePage() {
         const wineTitle = wineDetails[id].title;
         const split = wineTitle.split(" ");
         setBuyWineURL(buyWineURL + split.join("+"));
-    }, [id, wineDetails, buyWineURL]);
+        //eslint-disable-next-line
+    }, []);
     console.log(wine);
 
     return (
