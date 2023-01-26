@@ -1,6 +1,6 @@
 import React from "react";
 import WineCard from "../components/WineCard";
-import "./Recommendation.css"
+import "./Recommendation.css";
 
 import { useContext, useEffect } from "react";
 import AppContext from "../AppContext";
@@ -8,12 +8,12 @@ import AppContext from "../AppContext";
 export default function RecommendationPage() {
     const { searchResults, setWineDetails } = useContext(AppContext);
     useEffect(() => {
-        console.log(searchResults );
+        console.log(searchResults);
         const wines = {};
         searchResults.forEach(result => (wines[result.id] = result));
         console.log(wines);
         setWineDetails(wines);
-    }, []);
+    }, [searchResults, setWineDetails]);
 
     return (
         <div className="recommendationPage">

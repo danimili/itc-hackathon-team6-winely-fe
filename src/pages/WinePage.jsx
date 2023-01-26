@@ -17,7 +17,7 @@ export default function WinePage() {
         const wineTitle = wineDetails[id].title;
         const split = wineTitle.split(" ");
         setBuyWineURL(buyWineURL + split.join("+"));
-    }, [id, wineDetails]);
+    }, [id, wineDetails, buyWineURL]);
     console.log(wine);
 
     return (
@@ -53,7 +53,7 @@ export default function WinePage() {
                 <div className="wine-card-txt">
                     Rating: {wine.points}, Price: ${wine.price}
                 </div>
-                <a href={buyWineURL} target="_blank">
+                <a href={buyWineURL} target="_blank" rel="noreferrer">
                     <button id="btn-buy-now">Buy Now</button>
                 </a>
             </div>
