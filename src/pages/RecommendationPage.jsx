@@ -8,6 +8,7 @@ import AppContext from "../AppContext";
 export default function RecommendationPage() {
     const { searchResults, setWineDetails } = useContext(AppContext);
     useEffect(() => {
+        console.log(searchResults );
         const wines = {};
         searchResults.forEach(result => (wines[result.id] = result));
         console.log(wines);
