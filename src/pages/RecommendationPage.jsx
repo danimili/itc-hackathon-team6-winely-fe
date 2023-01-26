@@ -12,7 +12,7 @@ export default function RecommendationPage() {
         searchResults.forEach(result => (wines[result.id] = result));
         console.log(wines);
         setWineDetails(wines);
-    }, [searchResults, setWineDetails]);
+    }, []);
 
     return (
         <div className="recommendationPage">

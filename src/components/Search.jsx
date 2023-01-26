@@ -5,8 +5,11 @@ import "./Search.css";
 import AppContext from "../AppContext";
 
 const Dropdown = ({ wines }) => {
+  const { wineDetails, setSearchResults } = useContext(AppContext);
   const navigate = useNavigate();
-  const redirectToWine = (wineId) => {
+  const redirectToWine = async (wineId) => {
+    const wineList = await axios.get("http://localhost:8080" + "/Wines?id=" + wineId)
+    setSearchResults(wineList.data)
     navigate("/Wines?id=" + wineId);
   };
   if (wines.length === 0) {
