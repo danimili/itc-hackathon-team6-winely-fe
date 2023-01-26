@@ -6,16 +6,22 @@ import AppContext from "../AppContext";
 export default function WinePage() {
     const { wineDetails } = useContext(AppContext);
     const [wine, setWine] = useState({});
+    const [buyWineURL, setBuyWineURL] = useState(
+        "https://www.wine-searcher.com/find/"
+    );
     const params = new URL(document.location).searchParams;
     const id = params.get("id");
 
     useEffect(() => {
         setWine({ ...wineDetails[id] });
+        const wineTitle = wineDetails[id].title;
+        const split = wineTitle.split(" ");
+        setBuyWineURL(buyWineURL + split.join("+"));
     }, [id, wineDetails]);
     console.log(wine);
 
     return (
-        <>
+        <div className="wine-page-card-container">
             <div className="wine-page-card">
                 <div className="wine-card-top">
                     <img
@@ -45,9 +51,12 @@ export default function WinePage() {
                 </div>
                 <div className="wine-card-txt">Winery: {wine.winery}</div>
                 <div className="wine-card-txt">
-                    Rating: {wine.points} Price: {wine.price} Euro/Dollars?
+                    Rating: {wine.points}, Price: ${wine.price}
                 </div>
+                <a href={buyWineURL} target="_blank">
+                    <button id="btn-buy-now">Buy Now</button>
+                </a>
             </div>
-        </>
+        </div>
     );
 }
