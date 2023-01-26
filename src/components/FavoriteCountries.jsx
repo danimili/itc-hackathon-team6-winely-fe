@@ -26,7 +26,7 @@ function FavoriteCountries() {
                     <Row className="m-0">
                         <Col>
                             {" "}
-                            <h3 className="headline">Most wanted </h3>
+                            <h3 className="headline">Most Popular Countries </h3>
                         </Col>
                     </Row>
 
