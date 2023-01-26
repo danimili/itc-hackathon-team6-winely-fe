@@ -10,7 +10,7 @@ const countryNames = [
     { countryName: "Germany", flagUrl: "../flagImages/germany.png" },
     { countryName: "Portugal", flagUrl: "../flagImages/portugal.png" },
     { countryName: "Hungary", flagUrl: "../flagImages/hungary.png" },
-    { countryName: "United States", flagUrl: "../flagImages/unitedStates.png" },
+    { countryName: "United States", flagUrl: "../flagImages/unitedstates.png" },
     { countryName: "Chile", flagUrl: "../flagImages/chile.png" },
     { countryName: "South Africa", flagUrl: "../flagImages/south-africa.png" },
 ];
