@@ -19,7 +19,7 @@ export default function FavoriteCountry({countryName, flagUrl}) {
 
     <Row  className='favorite-country' onClick={navigateRecommendation } > 
       <img className=" fav-country-img" src={flagUrl} alt={countryName}/> 
-     <p> {countryName}</p> 
+     <p className='favorite-country-name'> {countryName}</p> 
     </Row>
       )
     }

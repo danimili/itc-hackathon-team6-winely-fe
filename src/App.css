@@ -38,12 +38,14 @@
     display: flex;
     text-align: start;
     /* align-items: center; */
-    height: 70px;
+    /* height: 70px; */
     width: 100%;
     /* border-bottom: solid 2px   rgb(204, 204, 204); */
     background-color: rgb(240, 240, 240, 0.75);
     margin-top: 11px;
     margin: 0;
+    padding:  15px 0 ;
+    border-radius: 4px;
     transition: all 0.2s ease-in-out;
   }
 
@@ -55,7 +57,18 @@
 
 
 .card-countryName{
-/* margin-top: 33px; */
+ font-family: 'Oswald', sans-serif;
+text-align: start;
+font-size: 16px;
+margin: auto;
+}
+
+.favorite-country-name{
+  font-family: 'Oswald', sans-serif;
+  text-align: start;
+  font-size: 16px;
+  color: rgb(244, 244, 244);
+
 }
 
 .wrap{

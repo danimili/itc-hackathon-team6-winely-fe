@@ -35,6 +35,8 @@ const handleSearch = async (e) => {
 
   const BarStyle = {
     width: "50rem",
+    // width: "30rem",
+
     background: "#F0F0F0",
     border: "none",
     padding: "0.5rem",
@@ -42,6 +44,7 @@ const handleSearch = async (e) => {
 
   return (
     <>
+     {/* <div className="wrap"> */}
       <input
       className="search-bar"
       id ="title"
@@ -51,6 +54,7 @@ const handleSearch = async (e) => {
       onChange={handleUserDetails}
       />
       <button className="search-btn" onClick= {handleSearch}>Search</button>
+      {/* </div> */}
     </>
   );
 };
