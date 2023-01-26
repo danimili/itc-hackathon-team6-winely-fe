@@ -33,12 +33,7 @@ const SearchBar = ({ keyword, onChange }) => {
         <div className="search-container">
             <h1>Search Wines</h1>
             <p>
-                The Romans named Sangiovese after the blood of Jupiter; that
-                must have been some hangover. The cabernet grape variety thrives
-                in a variety of vineyard soil types. Cheese is a perennial pair
-                with chardonnay, sauvignon blanc, don't get started on the pinks
-                and reds. Chenin blanc boasts a bouquet of fresh pears, saffron,
-                jasmine, ginger, and quince.
+             Search for a name or varietal of wine to get a recommendation. Otherwise pick a country and explore wine from a new culture. 
             </p>
             <div className="search-bar-container">
                 <input
