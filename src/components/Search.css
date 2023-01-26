@@ -28,3 +28,25 @@
     color: rgb(45, 45, 45);
     background-color: rgb(246, 246, 246);
 }
+
+.f {
+    display: flex;
+    border: solid rgb(200,200,200) 1px;
+
+}
+.score {
+    color: green;
+}
+.drop {
+    position: absolute;
+    width: 45.5%;
+    background: rgb(240,240,240);
+    word-wrap: break-word;
+    z-index: 100;
+    opacity: 95%;
+}
+
+.drop :hover {
+    background-color: rgb(200,200,200);
+    cursor: pointer;
+}

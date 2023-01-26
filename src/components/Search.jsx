@@ -1,32 +1,90 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import "./Search.css";
 import AppContext from "../AppContext";
 
-const SearchBar = ({ keyword, onChange }) => {
-    const navigate = useNavigate();
-    const { setSearchResults } = useContext(AppContext);
-    const [userDetails, setUserDetails] = useState("");
 
-    console.log(userDetails);
-    const handleUserDetails = e => {
-        setUserDetails({ [e.target.id]: e.target.value });
-    };
+const Dropdown = ({ wines }) => {
+  const navigate = useNavigate()
+  const redirectToWine = (wineId) => {
+    navigate('/Wines?id=' + wineId)
+  }
+  if(wines.length === 0) {
+    return (
+      <div className="drop ">
+      <div className="f">
+        <div className="p-3">
+          But no one came.
+        </div>
+      </div>
+      </div>
+    )
+  }
+  const wineList = wines.map((wine, index) => {
+    return (
+      <div onClick={()=>{redirectToWine(wine.id)}} key={index} className="f">
+        <div className="px-1">{wine.title}</div>
+        <div className="px-1">{wine.country}</div>
+        <div className="px-1 score" >{wine.points}</div>
+      </div>
+    );
+  });
+  return (
+    <div className="drop">
+      {wineList}
+    </div>
+  )
+};
+
+const SearchBar = ({ keyword, onChange }) => {
+  const [searchResults, setSearchResults] = useState([]);
+  const [userDetails, setUserDetails] = useState("");
+  const [showDrop, setShowDrop ]= useState(false)
+  const debounce = useRef("");
+
+  console.log(showDrop);
+  useEffect(() => {
+    debounce.current = userDetails;
+    setShowDrop(false)
+    const clear = setTimeout(() => {
+      console.log(userDetails, debounce.current);
+      if (userDetails === debounce.current && userDetails!== "") {
+        try {
+          axios
+            .get(`http://localhost:8080/search?title=${userDetails.title}`)
+            .then((res) => {
+              console.log(res);
+              setSearchResults(res.data);
+              if(res.data) {
+                setShowDrop(true)
+              }
+            });
+        } catch (err) {
+          alert(err);
+        }
+      }
+    }, 500);
+    return () => clearTimeout(clear);
+  }, [userDetails]);
+  const handleUserDetails = async (e) => {
+    setUserDetails({ [e.target.id]: e.target.value });
+    e.preventDefault();
+  };
 
     const handleSearch = async e => {
-        e.preventDefault();
-        console.log(userDetails);
-        try {
-            const res = await axios.get(
-                `http://localhost:8080/search?title=${userDetails.title}`
-            );
-            console.log(res);
-            setSearchResults(res.data);
-        } catch (err) {
-            alert(err);
-        }
-        navigate("/RecommendationPage");
+        // e.preventDefault();
+        // console.log(userDetails);
+        // try {
+        //     const res = await axios.get(
+        //         `http://localhost:8080/search?title=${userDetails.title}`
+        //     );
+        //     console.log(res);
+        //     setSearchResults(res.data);
+        // } catch (err) {
+        //     alert(err);
+        // }
+        // navigate("/RecommendationPage");
     };
 
     return (
@@ -43,6 +101,8 @@ const SearchBar = ({ keyword, onChange }) => {
                     placeholder={"Find your next favorite wine"}
                     onChange={handleUserDetails}
                 />
+                {showDrop ? <Dropdown wines={searchResults} /> : <></>}
+
                 <button className="search-btn" onClick={handleSearch}>
                     Search
                 </button>
